@@ -1,0 +1,17 @@
+div {
+  margin: 50px;
+  padding: 10px;
+  background-color: blue;
+}
+
+/* . se refere a uma classe */
+.principal {
+  margin: 80px;
+  padding: 20px;
+  background-color: green;
+}
+
+/* # refere-se a um id no html*/
+#id_principal {
+  background-color: black;
+}

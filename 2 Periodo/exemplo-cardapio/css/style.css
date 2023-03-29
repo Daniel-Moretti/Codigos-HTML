@@ -1,0 +1,31 @@
+html {
+  background-color: rgba(179, 179, 179, 0.527);
+}
+main {
+  width: 1031px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+  width: 1031px;
+  height: 95px;
+  margin: 10px 0px 0px 38px;
+}
+.font-Titles {
+  color: rgb(250, 171, 25);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 15px;
+}
+
+li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.8;
+}
+article {
+  margin: 0px 0px 5px 58px;
+  width: 580px;
+}

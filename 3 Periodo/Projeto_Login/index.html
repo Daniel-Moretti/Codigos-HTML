@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Cesul</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/script.js"></script>
+  </head>
+  <body>
+    <main>
+      <section>
+        <header>
+          <img src="assets/cesul.png" />
+        </header>
+        <div class="input-field">
+          <label for="login">Informe o seu login</label>
+          <input id="login" type="text" />
+        </div>
+
+        <div class="input-field">
+          <label for="password">Informe a sua senha</label>
+          <input id="password" type="password" />
+        </div>
+
+        <footer>
+          <button onclick="olaJavaScript()" type="button" id="btnLogin">
+            Logar
+          </button>
+          <button type="button" id="btnCancel">Cancelar</button>
+        </footer>
+      </section>
+
+      <footer>
+        <p>Escolha seu tema</p>
+
+        <div>
+          <input name="tema" id="light" type="radio" checked />
+          <input name="tema" id="dark" type="radio" />
+          <input name="tema" id="blue" type="radio" />
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

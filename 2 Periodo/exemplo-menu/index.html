@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo de Menu</title>
+    <style>
+      .mainmenubtn {
+        background-color: skyblue;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 20px;
+        margin-top: 20px;
+      }
+      .mainmenubtn:hover {
+        background-color: blue;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown-child {
+        display: none;
+        background-color: skyblue;
+        min-width: 200px;
+      }
+      .dropdown-child a {
+        color: blue;
+        padding: 20px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown:hover .dropdown-child {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dropdown">
+      <button class="mainmenubtn">Main Menu</button>
+      <div class="dropdown-child">
+        <a href="pages/cliente.html">Cliente</a>
+        <a href="pages/produto.html">Produto</a>
+        <a href="pages/compra.html">Compra</a>
+        <a href="pages/venda.html">Venda</a>
+        <a href="pages/empresa.html">Empresa</a>
+      </div>
+    </div>
+  </body>
+</html>

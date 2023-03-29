@@ -1,0 +1,93 @@
+* {
+  margin: 0px;
+}
+
+:root:has(#light:checked) {
+  --bg-color: #ddd;
+  --bg-section-color: #fff;
+}
+
+:root:has(#dark:checked) {
+  --bg-color: rgb(35, 35, 35);
+  --bg-section-color: rgb(77, 76, 76);
+}
+
+:root:has(#blue:checked) {
+  --bg-color: rgb(17, 69, 243);
+  --bg-section-color: rgb(122, 139, 197);
+}
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--bg-color);
+}
+
+main > section {
+  width: 30vw;
+  height: 50vh;
+  border: 1px solid #b7b6b6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 13px 20px 11px 0px rgba(0, 0, 0, 0.1);
+  min-width: 420px;
+  background-color: var(--bg-section-color);
+}
+
+img {
+  width: 125px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.input-field > label {
+  font-size: 18px;
+}
+
+.input-field > input {
+  font-size: 18px;
+  height: 28px;
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+
+section footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+footer button {
+  padding: 5px;
+  border: none;
+  width: 40%;
+  font-size: 18px;
+  border-radius: 5px;
+  color: white;
+}
+
+footer button:hover {
+  /* ao passar o mouse ele segue os parametros abaixo*/
+  background-color: #b7b6b6 !important; /* o important é para priorizar */
+  color: black;
+}
+
+#btnLogin {
+  background-color: rgb(30, 189, 30);
+}
+
+#btnCancel {
+  background-color: rgb(250, 34, 34);
+}

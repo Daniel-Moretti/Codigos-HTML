@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        background-color: #f6f6f6;
+      }
+      main {
+        width: 500px;
+        margin: -1px auto 10px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+    <script>
+      function mostrarResultado() {
+        document.getElementById("resultado").innerHTML =
+          document.getElementById("filhos").value;
+      }
+
+      function gravar() {
+        alert("Gravado com Sucesso");
+      }
+    </script>
+  </head>
+  <body>
+    <main>
+      <h1>Exemplo usando input</h1>
+      <div>
+        <label>Nome Completo</label>
+        <input type="text" size="60" maxlength="20" />
+      </div>
+      <div>
+        <label>Telefone</label>
+        <input type="text" size="20" maxlength="20" />
+      </div>
+      <div>
+        <input
+          type="text"
+          size="60"
+          maxlength="40"
+          placeholder="Informe o nome do curso"
+        />
+      </div>
+      <div>
+        <label>Informe o nome da loja</label>
+        <input type="text" list="lojas" size="60" />
+        <datalist id="lojas">
+          <option values="1">Centauro</option>
+          <option values="2">Submarino</option>
+          <option values="3">Americanas</option>
+          <option values="4">Amazon</option>
+        </datalist>
+      </div>
+      <div>
+        <label>Estado Civil</label>
+        <select size="1">
+          <option value="S">Solteiro(a)</option>
+          <option value="C">Casado(a)</option>
+          <option value="D">Divorciado(a)</option>
+          <option value="V">Viuvo(a)</option>
+        </select>
+      </div>
+      <div>
+        <label for="">Número de filhos</label>
+        <input
+          id="filhos"
+          type="range"
+          min="0"
+          max="10"
+          value="0"
+          onchange="mostrarResultado()"
+        />
+        <span id="resultado"></span>
+      </div>
+      <div>
+        <button onclick="gravar()">Gravar</button>
+      </div>
+    </main>
+  </body>
+</html>

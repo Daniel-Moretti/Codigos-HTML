@@ -1,0 +1,25 @@
+/* estilização da tag figure*/
+figure {
+  float: right;
+  margin-left: 15px;
+  border: 1px solid #999;
+  padding: 3px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 5px 5px 10px;
+}
+
+/* estilização da tag figcaption*/
+figcaption {
+  background-color: #ddd;
+  font-family: sans-serif;
+  font-size: 11px;
+  padding: 3px;
+}
+
+/* classe de estilização */
+.container {
+  background-color: #ede8e7;
+  height: 420px;
+  padding: 10px;
+}

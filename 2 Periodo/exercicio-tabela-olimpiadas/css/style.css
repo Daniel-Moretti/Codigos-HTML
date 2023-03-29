@@ -1,0 +1,49 @@
+.coluna1 {
+  background-color: #f0f0f0;
+}
+
+.coluna2 {
+  background-color: #daa520;
+}
+.coluna3 {
+  background-color: #c0c0c0;
+}
+
+.coluna4 {
+  background-color: #cd7f32;
+}
+
+.coluna5 {
+  background-color: aqua;
+}
+
+tr,
+td,
+th {
+  border: thin solid #ccc;
+  border-bottom: none;
+  border-right: none;
+  padding: 5px;
+}
+
+td {
+  text-align: center;
+}
+
+th {
+  text-align: left;
+}
+
+thead th {
+  text-align: center;
+  background-color: #e0e0e0;
+}
+
+thead tr th:first-child {
+  text-align: left;
+}
+
+tfoot td {
+  font-size: 0.9em;
+  color: #666;
+}
