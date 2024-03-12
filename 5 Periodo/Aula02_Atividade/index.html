@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">
+        <div>
+            <h1>CÁLCULO DE NOTA E MÉDIA FINAL</h1>
+            <p>Digite a quantidade de acertos e o peso de cada matéria para saber a nota e média final do aluno.</p>
+        </div>
+        <div class="formulario">
+            <div>
+                <label for="">Nome do aluno: </label>
+                <input type="text" id="nome_aluno" class="input_aluno">
+            </div>
+
+            <div class="materias">
+                <div class="alignMaterias">
+                    <h3>Matéria</h3>
+                    <label >Matemática</label>
+                    <label >Portugues</label>
+                    <label >História</label>
+                    <label >Geografia</label>
+                    <label >Inglês</label>
+                </div>
+    
+                <div class="alignMaterias">
+                    <h3>Acertos</h3>
+                    <input type="text" appearance="none" id="acertos_matematica" class="inputs">
+                    <input type="text" appearance="none" id="acertos_portugues" class="inputs">
+                    <input type="number" appearance="none" id="acertos_historia" class="inputs">
+                    <input type="number" appearance="none" id="acertos_geografia" class="inputs">
+                    <input type="number" appearance="none" id="acertos_ingles" class="inputs">
+                </div>
+    
+                <div class="alignMaterias">
+                    <h3>Peso</h3>
+                    <input type="text" id="peso_matematica" class="inputs">
+                    <input type="text" id="peso_portugues" class="inputs">
+                    <input type="number" id="peso_historia" class="inputs">
+                    <input type="number" id="peso_geografia" class="inputs">
+                    <input type="number" id="peso_ingles" class="inputs">
+                </div>
+    
+                <div class="alignMaterias">
+                    <h3>Nota</h3>
+                    <input type="text" id="nota_matematica" class="inputs" >
+                    <input type="text" id="nota_portugues" class="inputs">
+                    <input type="number" id="nota_historia" class="inputs">
+                    <input type="number" id="nota_geografia" class="inputs">
+                    <input type="number" id="nota_ingles" class="inputs">
+                </div>
+            </div>
+            
+        </div>
+        <div>
+            <button onclick="Notas()">Calcular</button>
+            <button >Limpar</button>
+        </div>
+    </div>
+</body>
+</html>

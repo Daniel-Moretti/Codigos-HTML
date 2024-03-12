@@ -1,0 +1,46 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+}
+.background{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input_aluno {
+    width: 350px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vh;
+}
+
+.materias {
+    display: flex;
+    width: 22vw;
+    height: 24vh;
+    flex-direction: row;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inputs {
+    width: 20px;
+}
+
+.alignMaterias {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100px;
+    height: 50px;
+}
