@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Elementos com jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <h2>Seleção de Campos de Texto</h2>
+
+    <input type="text" class="input-text" placeholder="Um campo">
+    <input type="text" class="input-text" placeholder="Outro campo">
+    <input type="text" placeholder="Outro Campo">
+    <input type="text" placeholder="Mais um Campo">
+
+    <script>
+        $(document).ready(function () {
+            // Seleciona todas as caixas de texto com a classe CSS "input-text"
+            var caixasTexto = $('.input-text');
+
+            // Altera a cor de fundo das caixas de texto selecionadas
+            caixasTexto.css('background-color', 'lightblue');
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eventos com jQuery</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<button id="btn-click">Clique Aqui</button>
+
+<script>
+$(document).ready(function() {
+    // Adiciona um manipulador de evento para o clique no botão
+    $('#btn-click').click(function() {
+        alert('Botão clicado!');
+    });
+});
+</script>
+
+</body>
+</html>

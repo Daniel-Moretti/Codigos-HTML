@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Requisição com Axios</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <button id="axiosButton">Fazer Requisição</button>
+
+  <script>
+    // Espera que o documento seja carregado antes de executar o código
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('axiosButton').addEventListener('click', function() {
+        // Fazendo uma requisição GET
+        axios.get('https://jsonplaceholder.typicode.com/posts/1')
+          .then(response => {
+            // Manipula os dados recebidos
+            console.log(response.data);
+          })
+          .catch(error => {
+            // Captura e trata erros
+            console.error('Erro:', error);
+          });
+      });
+    });
+  </script>
+</body>
+</html>

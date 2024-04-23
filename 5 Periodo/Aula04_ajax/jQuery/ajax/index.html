@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exemplo de jQuery</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h1>Exemplo de jQuery</h1>
+<button id="btn-carregar-dados">Carregar Dados</button>
+<div id="dados-container"></div>
+<script>
+$(document).ready(function() {
+    $('#btn-carregar-dados').click(function() {
+        $.get('https://jsonplaceholder.typicode.com/posts/1', function(data) {
+            $('#dados-container').text(JSON.stringify(data));
+        });
+    });
+});
+</script>
+</body>
+</html>

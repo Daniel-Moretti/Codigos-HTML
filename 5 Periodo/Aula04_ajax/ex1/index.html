@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Requisição AJAX Simples</title>
+</head>
+<body>
+
+<h2>Requisição AJAX Simples</h2>
+
+<!-- Botão para fazer a requisição AJAX -->
+<button onclick="fazerRequisicao()">Fazer Requisição</button>
+
+<script>
+    // Função para fazer a requisição AJAX
+    function fazerRequisicao() {
+        // Cria uma nova instância de XMLHttpRequest
+        var xhr = new XMLHttpRequest();
+
+        // Define uma função para ser chamada quando o estado da requisição mudar
+        xhr.onreadystatechange = function() {
+            // Verifica se a requisição foi concluída
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                // Verifica se a resposta do servidor foi bem-sucedida (status 200)
+                if (xhr.status === 200) {
+                    // Exibe a resposta do servidor no console
+                    console.log("Resposta do servidor:", xhr.responseText);
+                } else {
+                    // Exibe um erro caso a requisição não seja bem-sucedida
+                    console.error("Ocorreu um erro na requisição:", xhr.status);
+                }
+            }
+        };
+
+        // Abre a conexão com o servidor e configura a requisição como GET
+        xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts/1', true);
+        
+        // Envia a requisição
+        xhr.send();
+    }
+</script>
+
+</body>
+</html>

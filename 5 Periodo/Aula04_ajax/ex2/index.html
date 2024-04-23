@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monitoramento de Estados da Requisição AJAX</title>
+</head>
+<body>
+
+<!-- Título da página -->
+<h2>Monitoramento de Estados da Requisição AJAX</h2>
+
+<!-- Botão para iniciar a requisição AJAX -->
+<button onclick="iniciarRequisicao()">Iniciar Requisição</button>
+
+<script>
+    // Função para iniciar a requisição AJAX
+    function iniciarRequisicao() {
+        // Cria uma nova instância de XMLHttpRequest
+        var xhr = new XMLHttpRequest();
+
+        // Define uma função para ser chamada quando o estado da requisição mudar
+        xhr.onreadystatechange = function() {
+            // Verifica o estado da requisição e executa uma ação correspondente
+            if (xhr.readyState === XMLHttpRequest.UNSENT) {
+                // Estado: Requisição não iniciada
+                setTimeout(function() {
+                    console.log("Estado: Requisição não iniciada");
+                }, 1000);
+            } else if (xhr.readyState === XMLHttpRequest.OPENED) {
+                // Estado: Conexão com o servidor estabelecida
+                setTimeout(function() {
+                    console.log("Estado: Conexão com o servidor estabelecida");
+                }, 2000);
+            } else if (xhr.readyState === XMLHttpRequest.HEADERS_RECEIVED) {
+                // Estado: Cabeçalhos da resposta recebidos
+                setTimeout(function() {
+                    console.log("Estado: Cabeçalhos da resposta recebidos");
+                }, 3000);
+            } else if (xhr.readyState === XMLHttpRequest.LOADING) {
+                // Estado: Recebendo dados do servidor
+                setTimeout(function() {
+                    console.log("Estado: Recebendo dados do servidor");
+                }, 4000);
+            } else if (xhr.readyState === XMLHttpRequest.DONE) {
+                // Estado: Requisição concluída; a resposta está pronta
+                setTimeout(function() {
+                    console.log("Estado: Requisição concluída; a resposta está pronta");
+                    // Verifica se a resposta do servidor foi bem-sucedida (status 200)
+                    if (xhr.status === 200) {
+                        // Exibe a resposta do servidor no console
+                        console.log("Resposta do servidor:", xhr.responseText);
+                    } else {
+                        // Exibe um erro caso a requisição não seja bem-sucedida
+                        console.error("Ocorreu um erro na requisição.");
+                    }
+                }, 5000);
+            }
+        };
+
+        // Abre a conexão com o servidor e configura a requisição como GET
+        xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts/1', true);
+        
+        // Envia a requisição
+        xhr.send();
+    }
+</script>
+
+</body>
+</html>

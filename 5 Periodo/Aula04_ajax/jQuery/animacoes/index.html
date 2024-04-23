@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animações e Efeitos Visuais com jQuery</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div id="conteudo" style="display: none;">
+    Este é um conteúdo oculto.
+</div>
+<button id="btn-toggle">Mostrar/Ocultar</button>
+
+<script>
+$(document).ready(function() {
+    // Adiciona um efeito de slideToggle ao botão
+    $('#btn-toggle').click(function() {
+        $('#conteudo').slideToggle();
+    });
+});
+</script>
+
+</body>
+</html>

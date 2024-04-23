@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manipulação de Elementos com jQuery</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    .red-text {
+        color: red;
+    }
+    .item-container {
+        margin-bottom: 10px;
+    }
+    .btn-container {
+        margin-left: 10px;
+    }
+</style>
+</head>
+<body>
+
+<h2>Lista de Itens</h2>
+
+<ul id="lista-itens">
+    <li class="item-container"><span contenteditable="true">Item 1</span><span class="btn-container"><button class="btn-remover">Remover</button><button class="btn-alterar-cor">Alterar Cor</button></span></li>
+    <li class="item-container"><span contenteditable="true">Item 2</span><span class="btn-container"><button class="btn-remover">Remover</button><button class="btn-alterar-cor">Alterar Cor</button></span></li>
+    <li class="item-container"><span contenteditable="true">Item 3</span><span class="btn-container"><button class="btn-remover">Remover</button><button class="btn-alterar-cor">Alterar Cor</button></span></li>
+</ul>
+
+<button id="btn-adicionar">Adicionar Item</button>
+
+<script>
+$(document).ready(function() {
+    // Adiciona um novo item à lista quando o botão "Adicionar Item" é clicado
+    $('#btn-adicionar').click(function() {
+        $('#lista-itens').append('<li class="item-container"><span contenteditable="true">Novo Item</span><span class="btn-container"><button class="btn-remover">Remover</button><button class="btn-alterar-cor">Alterar Cor</button></span></li>');
+    });
+
+    // Remove o item da lista quando o botão "Remover" é clicado
+    $(document).on('click', '.btn-remover', function() {
+        $(this).closest('li').remove();
+    });
+
+    // Altera a cor do texto quando o botão "Alterar Cor" é clicado
+    $(document).on('click', '.btn-alterar-cor', function() {
+        $(this).closest('.item-container').find('span').toggleClass('red-text');
+    });
+});
+</script>
+
+</body>
+</html>

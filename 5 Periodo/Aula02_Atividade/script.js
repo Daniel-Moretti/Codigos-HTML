@@ -30,3 +30,4 @@ function Notas(){
     document.getElementById("nota_ingles").value = notaIngles;
 
 }
+
