@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .disabledButtonSab {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+        #restriction-message {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgb(0 0 0 / 21%);
+            z-index: 1000; /* Ensures the overlay is on top */
+        }
+        #messageSaturday{
+            position: fixed;
+            top: 25%;
+            left: 30%;
+            width: 350px;
+            height: 350px;
+            color: red;
+            font-size: 24px;
+            background-color: white;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .close-button {
+            position: absolute;
+            bottom: 70px;
+            background-color: #b09b45;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            width: 120px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+        }
+    </style>
+
+    <script src="scrip.js"></script>
+
+</head>
+<body>
+    <div id="restriction-message">
+        <div id="messageSaturday">
+            Nosso site não faz vendas do por do Sol da sexta até o por do Sol de Sábado.
+            <button class="close-button" onclick="closeRestrictionMessage()">Fechar</button>
+        </div>
+    </div>
+    
+    <div id="content">
+        <main>
+            <p>Informe o primeiro valor</p>
+            <input type="number" id="primeiroValor" />
+      
+            <p>Informe o segundo valor</p>
+            <input type="number" id="segundoValor" />
+      
+            <div>
+                <div class="div-button">
+                    <button class="buy-button" onclick="somar()">Somar</button>
+                </div>
+              <button class="buy-button" onclick="subtrair()">Subtrair</button>
+              <button class="buy-button" onclick="dividir()">Dividir</button>
+              <button class="buy-button" onclick="multiplicar()">Multiplicar</button>
+            </div>
+      
+            <div>
+              <p>Resultado</p>
+              <input type="number" id="resultado" readonly />
+            </div>
+          </main>
+    </div>
+
+    <script>
+        function checkRestriction() {
+            const now = new Date();
+            const dayOfWeek = now.getDay();
+            const hours = now.getHours();
+
+            let isRestricted = false;
+
+            if (dayOfWeek === 4 && hours >= 18) { // Friday after 18:00
+                isRestricted = true;
+            } else if (dayOfWeek === 6 && hours < 18) { // Saturday before 18:00
+                isRestricted = true;
+            }
+
+            if (isRestricted) {
+                document.getElementById('restriction-message').style.display = 'block';
+                const buyButtons = document.querySelectorAll('.comprar');
+                buyButtons.forEach(div => {
+                    div.classList.add('disabledButtonSab');
+                    div.disabled = true;
+                });
+            }
+        }
+
+        function closeRestrictionMessage() {
+            document.getElementById('restriction-message').style.display = 'none';
+        }
+
+        checkRestriction();
+    </script>
+</body>
+</html>
